@@ -1,10 +1,10 @@
 {
-  "name": "nm-roll-lib",
-  "version": "1.0.0",
+  "name": "nm-roll",
+  "version": "1.0.5",
   "description": "",
   "author": "nickmarca",
   "license": "MIT",
-  "repository": "nickmarca/nm-roll-lib",
+  "repository": "https://github.com/nickmarca/nm-roll",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
@@ -23,8 +23,8 @@
   },
   "peerDependencies": {
     "prop-types": "^15.5.4",
-    "react": "^15.0.0 || ^16.0.0",
-    "react-dom": "^15.0.0 || ^16.0.0"
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
   "devDependencies": {
     "@svgr/rollup": "^2.4.1",
@@ -57,5 +57,9 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "@emotion/core": "^10.0.14",
+    "react-motion": "^0.5.2"
+  }
 }

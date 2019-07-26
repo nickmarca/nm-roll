@@ -2,7 +2,7 @@
 
 > 
 
-[![NPM](https://img.shields.io/npm/v/nm-roll-lib.svg)](https://www.npmjs.com/package/nm-roll-lib) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/nm-roll.svg)](https://www.npmjs.com/package/nm-roll-lib) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
