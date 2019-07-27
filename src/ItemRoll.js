@@ -10,7 +10,7 @@ const imgCss = css`
     position: absolute;
     top: 0;
     left: 0;
-    index: 0;
+    z-index: 0;
 `
 
 const isPreviousCss = css`
@@ -21,7 +21,7 @@ const isCurrentCss = css`
     z-index: 2;
 `
 
-function ItemRoll({ source, isCurrent, isPrevious }) {
+function ItemRoll({ source, isCurrent, isPrevious, css }) {
   return (
     <Motion
       defaultStyle={{ x: 0 }}
@@ -31,7 +31,7 @@ function ItemRoll({ source, isCurrent, isPrevious }) {
     >
       {({ opacity, x }) => (
         <img
-          css={[imgCss, isPrevious && isPreviousCss, isCurrent && isCurrentCss]}
+          css={[imgCss, isPrevious && isPreviousCss, isCurrent && isCurrentCss, css]}
           src={source}
           style={{ opacity, transform: `translateX(${x}px)` }}
           alt='roll item'
