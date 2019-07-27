@@ -113,6 +113,7 @@ function ItemRoll(_ref) {
   var source = _ref.source,
       isCurrent = _ref.isCurrent,
       isPrevious = _ref.isPrevious,
+      width = _ref.width,
       css = _ref.css;
 
   return core.jsx(
@@ -120,16 +121,15 @@ function ItemRoll(_ref) {
     {
       defaultStyle: { x: 0 },
       style: {
-        x: reactMotion.spring(isCurrent ? 0 : isPrevious ? 600 : -600)
+        x: reactMotion.spring(isCurrent ? 0 : isPrevious ? width : -width)
       }
     },
     function (_ref2) {
-      var opacity = _ref2.opacity,
-          x = _ref2.x;
+      var x = _ref2.x;
       return core.jsx('img', {
         css: [imgCss, isPrevious && isPreviousCss, isCurrent && isCurrentCss, css],
         src: source,
-        style: { opacity: opacity, transform: 'translateX(' + x + 'px)' },
+        style: { transform: 'translateX(' + x + 'px)' },
         alt: 'roll item'
       });
     }
