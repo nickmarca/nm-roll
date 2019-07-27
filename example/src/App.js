@@ -29,6 +29,7 @@ export default () => {
         render={currentIndex =>
           items.map(({ url, id }, index) => (
             <ItemRoll
+              width={600}
               source={url}
               id={id}
               key={id}

@@ -21,19 +21,19 @@ const isCurrentCss = css`
     z-index: 2;
 `
 
-function ItemRoll({ source, isCurrent, isPrevious, css }) {
+function ItemRoll({ source, isCurrent, isPrevious, width, css }) {
   return (
     <Motion
       defaultStyle={{ x: 0 }}
       style={{
-        x: spring(isCurrent ? 0 : isPrevious ? 600 : -600)
+        x: spring(isCurrent ? 0 : isPrevious ? width : -width)
       }}
     >
-      {({ opacity, x }) => (
+      {({ x }) => (
         <img
           css={[imgCss, isPrevious && isPreviousCss, isCurrent && isCurrentCss, css]}
           src={source}
-          style={{ opacity, transform: `translateX(${x}px)` }}
+          style={{ transform: `translateX(${x}px)` }}
           alt='roll item'
         />
       )}
